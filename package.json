@@ -11,7 +11,9 @@
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
     "record:youcam": "tsx scripts/record-youcam.ts",
-    "precompute": "tsx scripts/precompute-agent.ts"
+    "precompute": "tsx scripts/precompute-agent.ts",
+    "test:e2e": "playwright test",
+    "screenshots": "SHOTS=1 playwright test"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.133.0",
@@ -21,6 +23,7 @@
     "zod": "^4.6.5"
   },
   "devDependencies": {
+    "@playwright/test": "1.64",
     "@types/node": "^24.19.2",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
