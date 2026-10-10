@@ -1,0 +1,346 @@
+{
+  "plan": {
+    "headline": "Hold off on the $68 firming serum. A $19 barrier cream fixes your real issue: dry skin.",
+    "summary": "Your scan flags one thing that needs action: hydration (moisture raw 39.4). Everything else is watch-level or fine. Firmness, the thing the cart serum is for, scores 78.2 (fine). You already use a hyaluronic serum and an oil-free gel moisturizer, but your scan still flags hydration. The gel is too light for skin the scan reads as dry. Swap it for the Velin Ceramide Barrier Cream ($19). It seals water in and also helps with redness (63.5). Keep the rest of your shelf. Total spend: $19 of your $70.",
+    "verdicts": [
+      {
+        "product_id": "velin-gel-cleanser",
+        "action": "keep",
+        "reason": "A gentle cleanser you use morning and night. Nothing on your scan calls for a change.",
+        "evidence": []
+      },
+      {
+        "product_id": "velin-ha-serum",
+        "action": "keep",
+        "reason": "Pulls water into the skin. Hydration is your weakest score (raw 39.4). It works better with a richer cream on top.",
+        "evidence": [
+          "moisture"
+        ]
+      },
+      {
+        "product_id": "oramel-vitc-15",
+        "action": "keep",
+        "reason": "Morning brightening serum. It treats dullness (radiance raw 61.8) and helps prevent dark spots.",
+        "evidence": [
+          "radiance",
+          "age_spot"
+        ]
+      },
+      {
+        "product_id": "kestra-oilfree-gel",
+        "action": "drop",
+        "reason": "Too light for dry skin. You have used it since March, and hydration still scores 39.4. The ceramide cream takes over its job.",
+        "evidence": [
+          "moisture"
+        ]
+      },
+      {
+        "product_id": "velin-spf50-fluid",
+        "action": "keep",
+        "reason": "Daily sunscreen protects against fine lines (forehead raw 58.6), redness and spots. This is the most important step.",
+        "evidence": [
+          "wrinkle",
+          "redness",
+          "age_spot"
+        ]
+      },
+      {
+        "product_id": "oramel-rich-eye",
+        "action": "keep",
+        "reason": "Peptide eye cream for dark circles (raw 55.1) and fine lines. You started it in July, so give it about 8 weeks before you judge it.",
+        "evidence": [
+          "dark_circle",
+          "wrinkle"
+        ]
+      }
+    ],
+    "cart": [
+      {
+        "product_id": "oramel-peptide-firming",
+        "decision": "wait",
+        "reason": "Firmness scores 78.2, which is fine, and fine lines are only watch-level. At $68 it would use almost your whole budget while hydration (raw 39.4) goes untreated. Look at it again after your next scan."
+      }
+    ],
+    "buy": [
+      {
+        "product_id": "velin-ceramide-cream",
+        "reason": "Ceramides (fats your skin barrier is made of) repair the barrier and hold in water. It treats your one act-level issue, hydration (raw 39.4), and helps with redness (raw 63.5). $19, use morning and night.",
+        "evidence": [
+          "moisture",
+          "redness"
+        ]
+      }
+    ],
+    "skip": [
+      {
+        "label": "Retinol / retinal serums",
+        "reason": "Fine lines are only watch-level (raw 64.2). On dry skin, retinoids add flaking. Fix hydration first."
+      },
+      {
+        "label": "Glycolic peel pads",
+        "reason": "Texture is watch-level (raw 60.3). Acid pads would dry out skin that already scores 39.4 on hydration."
+      },
+      {
+        "label": "Niacinamide + zinc serum",
+        "reason": "Built for oil, pores and breakouts. Yours score 88.1, 77.3 and 85.7, all fine."
+      },
+      {
+        "label": "Creams for under-eye hollows",
+        "reason": "Tear trough (raw 60.4) is about bone and fat structure. No cream can change it."
+      }
+    ],
+    "routine": {
+      "am": [
+        {
+          "product_id": "velin-gel-cleanser"
+        },
+        {
+          "product_id": "oramel-vitc-15"
+        },
+        {
+          "product_id": "velin-ha-serum"
+        },
+        {
+          "product_id": "oramel-rich-eye"
+        },
+        {
+          "product_id": "velin-ceramide-cream"
+        },
+        {
+          "product_id": "velin-spf50-fluid"
+        }
+      ],
+      "pm": [
+        {
+          "product_id": "velin-gel-cleanser",
+          "nights": [
+            "Mon",
+            "Tue",
+            "Wed",
+            "Thu",
+            "Fri",
+            "Sat",
+            "Sun"
+          ]
+        },
+        {
+          "product_id": "velin-ha-serum",
+          "nights": [
+            "Mon",
+            "Tue",
+            "Wed",
+            "Thu",
+            "Fri",
+            "Sat",
+            "Sun"
+          ]
+        },
+        {
+          "product_id": "oramel-rich-eye",
+          "nights": [
+            "Mon",
+            "Tue",
+            "Wed",
+            "Thu",
+            "Fri",
+            "Sat",
+            "Sun"
+          ]
+        },
+        {
+          "product_id": "velin-ceramide-cream",
+          "nights": [
+            "Mon",
+            "Tue",
+            "Wed",
+            "Thu",
+            "Fri",
+            "Sat",
+            "Sun"
+          ]
+        }
+      ],
+      "notes": [
+        "Put the hyaluronic serum on slightly damp skin, then the ceramide cream right away to seal it in.",
+        "Sunscreen is the last morning step. Use two finger-lengths for face and neck.",
+        "No conflicts: the vitamin C is morning-only, and nothing else is a strong active."
+      ]
+    },
+    "look": {
+      "foundation_id": "pallu-tint-130n",
+      "everyday_lip_id": "velin-lip-nude-rose",
+      "statement_lip_id": "velin-lip-coral",
+      "blush_id": "kestra-blush-peach",
+      "note": "You have a warm undertone. 130N Light is the closest tint match. Nude Rose is close to your natural lip colour, and Coral Wash with Peach blush works for a bolder look. Use a hydrating tint, since powder can cling to dry patches."
+    },
+    "preview": {
+      "horizon_weeks": 8,
+      "concerns": [
+        {
+          "concern": "redness",
+          "intensity": 0.5
+        },
+        {
+          "concern": "radiance",
+          "intensity": 0.5
+        },
+        {
+          "concern": "dark_circle",
+          "intensity": 0.5
+        }
+      ]
+    },
+    "checkin": {
+      "after_weeks": 8,
+      "watch": [
+        "moisture",
+        "redness",
+        "dark_circle",
+        "wrinkle"
+      ],
+      "note": "Rescan in 8 weeks. If hydration has climbed well above 39.4 and fine lines are still the weak spot, that is the time to look at the firming serum again."
+    },
+    "caveats": [
+      "The preview shows the best you can expect by 8 weeks, not a promise.",
+      "Under-eye hollows (tear trough) and eyelid shape are structural. Skincare cannot change them.",
+      "If the new cream stings or causes bumps, stop using it and go back to your gel moisturizer."
+    ]
+  },
+  "trace": [
+    {
+      "tool": "read_scan",
+      "input": {},
+      "result": "15 concerns; flagged: moisture 39.4, dark circle 55.1, texture 60.3, radiance 61.8, redness 63.5, wrinkle 64.2",
+      "isError": false,
+      "ms": 1
+    },
+    {
+      "tool": "audit_shelf",
+      "input": {},
+      "result": "keep 6",
+      "isError": false,
+      "ms": 0
+    },
+    {
+      "tool": "naive_cart",
+      "input": {},
+      "result": "6 products for $200, 1 already owned",
+      "isError": false,
+      "ms": 0
+    },
+    {
+      "tool": "match_shades",
+      "input": {},
+      "result": "best foundation 130N Light (ΔE 3.24); warm undertone",
+      "isError": false,
+      "ms": 1
+    },
+    {
+      "tool": "evaluate_cart",
+      "input": {
+        "keep_ids": [
+          "velin-gel-cleanser",
+          "velin-ha-serum",
+          "oramel-vitc-15",
+          "kestra-oilfree-gel",
+          "velin-spf50-fluid",
+          "oramel-rich-eye"
+        ]
+      },
+      "result": "oramel-peptide-firming: wait",
+      "isError": false,
+      "ms": 1
+    },
+    {
+      "tool": "find_gaps",
+      "input": {
+        "keep_ids": [
+          "velin-gel-cleanser",
+          "velin-ha-serum",
+          "oramel-vitc-15",
+          "kestra-oilfree-gel",
+          "velin-spf50-fluid",
+          "oramel-rich-eye"
+        ]
+      },
+      "result": "moisture (undertreated)",
+      "isError": false,
+      "ms": 0
+    },
+    {
+      "tool": "search_catalog",
+      "input": {
+        "keep_ids": [
+          "velin-gel-cleanser",
+          "velin-ha-serum",
+          "oramel-vitc-15",
+          "kestra-oilfree-gel",
+          "velin-spf50-fluid",
+          "oramel-rich-eye"
+        ],
+        "category": "moisturizer",
+        "concern": "moisture",
+        "max_price_usd": 70
+      },
+      "result": "Velin Ceramide Barrier Cream $19 · Oramel Squalane Night Balm $39",
+      "isError": false,
+      "ms": 1
+    },
+    {
+      "tool": "build_routine",
+      "input": {
+        "product_ids": [
+          "velin-gel-cleanser",
+          "velin-ha-serum",
+          "oramel-vitc-15",
+          "velin-ceramide-cream",
+          "velin-spf50-fluid",
+          "oramel-rich-eye"
+        ]
+      },
+      "result": "AM 6 steps, PM 4 steps, 0 conflicts",
+      "isError": false,
+      "ms": 1
+    },
+    {
+      "tool": "preview_settings",
+      "input": {
+        "product_ids": [
+          "velin-gel-cleanser",
+          "velin-ha-serum",
+          "oramel-vitc-15",
+          "velin-ceramide-cream",
+          "velin-spf50-fluid",
+          "oramel-rich-eye"
+        ],
+        "concerns": [
+          "moisture",
+          "redness",
+          "radiance",
+          "dark_circle"
+        ],
+        "horizon_weeks": 8
+      },
+      "result": "redness 0.5, radiance 0.5, dark circle 0.5",
+      "isError": false,
+      "ms": 1
+    },
+    {
+      "tool": "submit_plan",
+      "input": "(plan)",
+      "result": "Plan accepted.",
+      "isError": false,
+      "ms": 11
+    }
+  ],
+  "model": "claude-opus-5-5",
+  "turns": 4,
+  "usage": {
+    "input_tokens": 10,
+    "output_tokens": 3555,
+    "cache_read_input_tokens": 22795
+  },
+  "createdAt": "2026-10-10T19:26:53.791Z",
+  "scenarioId": "jun",
+  "fingerprint": "c53612d58fad73de"
+}

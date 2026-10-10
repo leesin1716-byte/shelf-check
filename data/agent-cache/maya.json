@@ -1,0 +1,376 @@
+{
+  "plan": {
+    "headline": "You don't need a new acne product. Use fewer actives and add sunscreen and a gentle moisturizer ($41).",
+    "summary": "Your scan flags acne (raw 38.2), oiliness (41.5), pores (46.1, worst on the nose at 31.4) and redness (47.3). You already own strong acne treatments: a salicylic acid wash, a 2% BHA liquid, retinol, niacinamide with zinc and a benzoyl peroxide spot gel. Using four strong actives at once on red skin can make breakouts and redness worse. So we pause the glycolic pads. We also pause the scented rose cream, because it is heavy and fragranced. We drop the second niacinamide serum, since it does the same job as the first. What's missing is the basics. You have no sunscreen, and once the cream is paused you have no moisturizer. Two products fill those gaps for $41, well under your $60 budget.",
+    "verdicts": [
+      {
+        "product_id": "kestra-clarifying-wash",
+        "action": "keep",
+        "reason": "Gentle 0.5% salicylic acid cleanser. Clears oil and pores, which matters with acne at raw 38.2 and oiliness at 41.5.",
+        "evidence": [
+          "acne",
+          "oiliness",
+          "pore"
+        ]
+      },
+      {
+        "product_id": "kestra-bha-liquid",
+        "action": "alternate",
+        "reason": "Unclogs pores (raw 46.1, nose 31.4) and helps acne. Use only on Tue and Sat, never on a retinol night, so your skin isn't over-exfoliated.",
+        "evidence": [
+          "acne",
+          "pore",
+          "oiliness"
+        ]
+      },
+      {
+        "product_id": "oramel-retinol-03",
+        "action": "alternate",
+        "reason": "Helps acne and texture (raw 57.8) over 12 weeks, and you're about 10 weeks in. Use on Mon, Wed and Fri only, never on BHA nights.",
+        "evidence": [
+          "acne",
+          "texture",
+          "pore"
+        ]
+      },
+      {
+        "product_id": "pallu-glycolic-pads",
+        "action": "pause",
+        "reason": "Your harshest exfoliant, and it targets texture, which is only at 'watch' (57.8). Redness is at 47.3, so pause it until redness and moisture recover.",
+        "evidence": [
+          "redness",
+          "texture"
+        ]
+      },
+      {
+        "product_id": "kestra-niacinamide-10",
+        "action": "keep",
+        "reason": "Calms oil, pores, acne and redness, four of your flagged concerns, with low irritation. Use it morning and night.",
+        "evidence": [
+          "oiliness",
+          "pore",
+          "acne",
+          "redness"
+        ]
+      },
+      {
+        "product_id": "pallu-niacinamide-5",
+        "action": "drop",
+        "reason": "Same main ingredient (niacinamide) as the Kestra 10% + Zinc, which covers more of your flagged concerns. You only need one.",
+        "evidence": [
+          "redness",
+          "pore"
+        ]
+      },
+      {
+        "product_id": "kestra-bp-spot",
+        "action": "keep",
+        "reason": "Benzoyl peroxide spot gel for this breakout. Dab it only on active spots in the morning. Acne is your worst score at 38.2.",
+        "evidence": [
+          "acne"
+        ]
+      },
+      {
+        "product_id": "pallu-rose-cream",
+        "action": "pause",
+        "reason": "Added fragrance can irritate red skin (redness 47.3), and the heavy texture can clog oily, breakout-prone skin. Swap it for the ceramide cream for now.",
+        "evidence": [
+          "redness",
+          "acne",
+          "oiliness"
+        ]
+      }
+    ],
+    "cart": [],
+    "buy": [
+      {
+        "product_id": "kestra-mineral-spf40",
+        "reason": "You have no sunscreen, but retinol and acids make skin burn more easily. This matte, fragrance-free mineral SPF 40 also helps with shine (oiliness 41.5). $22.",
+        "evidence": [
+          "oiliness"
+        ]
+      },
+      {
+        "product_id": "velin-ceramide-cream",
+        "reason": "Takes over from the paused rose cream. It's fragrance-free, has zero irritation, and its ceramides (fats that repair the skin's protective outer layer) help with redness (raw 47.3) and moisture (62.4). $19.",
+        "evidence": [
+          "redness",
+          "moisture"
+        ]
+      }
+    ],
+    "skip": [
+      {
+        "label": "Another acne serum or spot treatment",
+        "reason": "You already own five acne fighters. Adding more would raise irritation without making breakouts heal faster."
+      },
+      {
+        "label": "Velin Retinal 0.1% Night Serum ($52)",
+        "reason": "This would be a second retinoid on top of your retinol. Wrinkles (82.3) and firmness (88.5) are fine anyway."
+      },
+      {
+        "label": "Oramel Squalane Night Balm ($39)",
+        "reason": "It's a rich balm, a poor fit for oily, breakout-prone skin. The ceramide cream covers moisture for less money."
+      },
+      {
+        "label": "Eyelid or tear-trough creams",
+        "reason": "Eyelid droop and tear troughs are structural, so creams can't change them. Yours score fine anyway (79.6 to 85.3)."
+      }
+    ],
+    "routine": {
+      "am": [
+        {
+          "product_id": "kestra-clarifying-wash"
+        },
+        {
+          "product_id": "kestra-niacinamide-10"
+        },
+        {
+          "product_id": "kestra-bp-spot"
+        },
+        {
+          "product_id": "velin-ceramide-cream"
+        },
+        {
+          "product_id": "kestra-mineral-spf40"
+        }
+      ],
+      "pm": [
+        {
+          "product_id": "kestra-clarifying-wash",
+          "nights": [
+            "Mon",
+            "Tue",
+            "Wed",
+            "Thu",
+            "Fri",
+            "Sat",
+            "Sun"
+          ]
+        },
+        {
+          "product_id": "kestra-bha-liquid",
+          "nights": [
+            "Tue",
+            "Sat"
+          ]
+        },
+        {
+          "product_id": "oramel-retinol-03",
+          "nights": [
+            "Mon",
+            "Wed",
+            "Fri"
+          ]
+        },
+        {
+          "product_id": "kestra-niacinamide-10",
+          "nights": [
+            "Mon",
+            "Tue",
+            "Wed",
+            "Thu",
+            "Fri",
+            "Sat",
+            "Sun"
+          ]
+        },
+        {
+          "product_id": "velin-ceramide-cream",
+          "nights": [
+            "Mon",
+            "Tue",
+            "Wed",
+            "Thu",
+            "Fri",
+            "Sat",
+            "Sun"
+          ]
+        }
+      ],
+      "notes": [
+        "Use retinol on Mon, Wed and Fri, and BHA on Tue and Sat. Never use both on the same night.",
+        "Thursday and Sunday are recovery nights: just cleanse, niacinamide and moisturizer.",
+        "Put the benzoyl peroxide gel only on active spots, not all over your face.",
+        "Sunscreen goes on last every morning. Use two finger-lengths for face and neck."
+      ]
+    },
+    "look": {
+      "foundation_id": "pallu-tint-220n",
+      "everyday_lip_id": "velin-lip-rosewood",
+      "statement_lip_id": "velin-lip-berry",
+      "blush_id": "kestra-blush-peach",
+      "note": "220N Medium is the closest match to your skin tone (difference score ΔE 2.6, low = closer; neutral undertone). Rosewood suits your natural lip colour for everyday wear, and Berry is your bold option. Peach blush is soft but a little off your undertone."
+    },
+    "preview": {
+      "horizon_weeks": 8,
+      "concerns": [
+        {
+          "concern": "acne",
+          "intensity": 0.5
+        },
+        {
+          "concern": "pore",
+          "intensity": 0.5
+        },
+        {
+          "concern": "redness",
+          "intensity": 0.5
+        }
+      ]
+    },
+    "checkin": {
+      "after_weeks": 8,
+      "watch": [
+        "acne",
+        "redness",
+        "oiliness",
+        "pore"
+      ],
+      "note": "Rescan in 8 weeks. If redness has improved from 47.3 and moisture from 62.4, you can bring back the glycolic pads once a week, on a night with no retinol or BHA."
+    },
+    "caveats": [
+      "Breakouts often take 6 to 8 weeks to settle, and new spots during that time are normal.",
+      "If you get stinging, peeling or more redness, skip retinol and BHA for a few nights and use just cleanser, niacinamide and moisturizer.",
+      "The skin preview shows a realistic best case at 8 weeks, not a guarantee.",
+      "See a dermatologist if you get painful, deep or scarring breakouts."
+    ]
+  },
+  "trace": [
+    {
+      "tool": "read_scan",
+      "input": {},
+      "result": "15 concerns; flagged: acne 38.2, oiliness 41.5, pore 46.1, redness 47.3, texture 57.8, moisture 62.4",
+      "isError": false,
+      "ms": 1
+    },
+    {
+      "tool": "audit_shelf",
+      "input": {},
+      "result": "keep 3 · alternate 2 · pause 2 · drop 1; risks: over exfoliation, fragrance on reactive skin, occlusive on breakouts, duplicate active, missing sunscreen",
+      "isError": false,
+      "ms": 1
+    },
+    {
+      "tool": "match_shades",
+      "input": {},
+      "result": "best foundation 220N Medium (ΔE 2.61); neutral undertone",
+      "isError": false,
+      "ms": 1
+    },
+    {
+      "tool": "naive_cart",
+      "input": {},
+      "result": "6 products for $189, 4 already owned",
+      "isError": false,
+      "ms": 0
+    },
+    {
+      "tool": "find_gaps",
+      "input": {
+        "keep_ids": [
+          "kestra-clarifying-wash",
+          "kestra-bha-liquid",
+          "oramel-retinol-03",
+          "kestra-niacinamide-10",
+          "kestra-bp-spot"
+        ]
+      },
+      "result": "no sunscreen, no moisturizer, oiliness (undertreated), redness (undertreated)",
+      "isError": false,
+      "ms": 1
+    },
+    {
+      "tool": "search_catalog",
+      "input": {
+        "keep_ids": [
+          "kestra-clarifying-wash",
+          "kestra-bha-liquid",
+          "oramel-retinol-03",
+          "kestra-niacinamide-10",
+          "kestra-bp-spot"
+        ],
+        "category": "sunscreen",
+        "max_price_usd": 60
+      },
+      "result": "Kestra Matte Mineral SPF 40 $22 · Velin Daily Fluid SPF 50 $24",
+      "isError": false,
+      "ms": 0
+    },
+    {
+      "tool": "search_catalog",
+      "input": {
+        "keep_ids": [
+          "kestra-clarifying-wash",
+          "kestra-bha-liquid",
+          "oramel-retinol-03",
+          "kestra-niacinamide-10",
+          "kestra-bp-spot"
+        ],
+        "category": "moisturizer",
+        "max_price_usd": 60
+      },
+      "result": "Velin Ceramide Barrier Cream $19 · Kestra Oil-Free Gel Moisturizer $17",
+      "isError": false,
+      "ms": 0
+    },
+    {
+      "tool": "build_routine",
+      "input": {
+        "product_ids": [
+          "kestra-clarifying-wash",
+          "kestra-bha-liquid",
+          "oramel-retinol-03",
+          "kestra-niacinamide-10",
+          "kestra-bp-spot",
+          "kestra-mineral-spf40",
+          "velin-ceramide-cream"
+        ]
+      },
+      "result": "AM 5 steps, PM 5 steps, 0 conflicts",
+      "isError": false,
+      "ms": 1
+    },
+    {
+      "tool": "preview_settings",
+      "input": {
+        "product_ids": [
+          "kestra-clarifying-wash",
+          "kestra-bha-liquid",
+          "oramel-retinol-03",
+          "kestra-niacinamide-10",
+          "kestra-bp-spot",
+          "kestra-mineral-spf40",
+          "velin-ceramide-cream"
+        ],
+        "concerns": [
+          "acne",
+          "oiliness",
+          "pore",
+          "redness"
+        ],
+        "horizon_weeks": 8
+      },
+      "result": "acne 0.5, pore 0.5, redness 0.5",
+      "isError": false,
+      "ms": 0
+    },
+    {
+      "tool": "submit_plan",
+      "input": "(plan)",
+      "result": "Plan accepted.",
+      "isError": false,
+      "ms": 11
+    }
+  ],
+  "model": "claude-opus-5-5",
+  "turns": 4,
+  "usage": {
+    "input_tokens": 10,
+    "output_tokens": 4008,
+    "cache_read_input_tokens": 25609
+  },
+  "createdAt": "2026-10-10T19:26:09.434Z",
+  "scenarioId": "maya",
+  "fingerprint": "6489eef439122f5d"
+}

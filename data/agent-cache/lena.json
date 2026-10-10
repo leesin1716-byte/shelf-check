@@ -1,0 +1,297 @@
+{
+  "plan": {
+    "headline": "The tranexamic serum is working. Pause the retinal: your redness got worse after you started it. Buy nothing.",
+    "summary": "Six weeks after your new products, your rescan tells a mixed story. Age spots improved by 8.3 points (raw 44.2 to 52.5) and texture by 5.3 (57.6 to 62.9). Both are real changes, bigger than the ±4 noise. But redness got worse by 7.3 points (raw 66.4 to 59.1), and that started when you added the retinal serum. It sits on the same nights as 10% glycolic pads on skin the scan reads as redness-prone. Keep the tranexamic serum, because it is working. Pause the retinal so your skin can calm down. Use the pads only twice a week. Your cleanser, night balm and SPF 50 cover the basics. Nothing is missing, so you don't need to buy anything.",
+    "verdicts": [
+      {
+        "product_id": "pallu-tranexamic-3",
+        "action": "keep",
+        "reason": "Working. It fades dark spots, and your age-spot score improved 8.3 points (44.2 to 52.5) in 6 weeks. It is gentle, so use it morning and night.",
+        "evidence": [
+          "age_spot"
+        ]
+      },
+      {
+        "product_id": "velin-retinal-01",
+        "action": "pause",
+        "reason": "Irritating. Redness got 7.3 points worse (66.4 to 59.1) after you started it, on skin the scan reads as redness-prone. Stop for now. Once redness recovers, you could try it again 2 nights a week, never on pad nights.",
+        "evidence": [
+          "redness",
+          "wrinkle",
+          "firmness"
+        ]
+      },
+      {
+        "product_id": "pallu-glycolic-pads",
+        "action": "alternate",
+        "reason": "These exfoliate (clear dead skin) for texture and glow. Texture is up 5.3 points (57.6 to 62.9). They are strong (10% glycolic acid) for redness-prone skin, so use them just 2 nights a week while redness recovers.",
+        "evidence": [
+          "texture",
+          "radiance",
+          "redness"
+        ]
+      },
+      {
+        "product_id": "oramel-milk-cleanser",
+        "action": "keep",
+        "reason": "A gentle ceramide cleanser that protects your skin barrier. Moisture is at 62.8 raw, so this is the right kind of cleanser for you.",
+        "evidence": [
+          "moisture"
+        ]
+      },
+      {
+        "product_id": "oramel-squalane-balm",
+        "action": "keep",
+        "reason": "Your night moisturizer. It locks in water (moisture 62.8 raw) and soothes skin after the pads.",
+        "evidence": [
+          "moisture",
+          "firmness"
+        ]
+      },
+      {
+        "product_id": "velin-spf50-fluid",
+        "action": "keep",
+        "reason": "Daily SPF 50 is the most important step for you. It protects your age-spot gains (52.5 raw) and helps with wrinkles (54.1) and redness (59.1).",
+        "evidence": [
+          "age_spot",
+          "wrinkle",
+          "redness"
+        ]
+      }
+    ],
+    "cart": [],
+    "buy": [],
+    "skip": [
+      {
+        "label": "Another retinol or retinal serum",
+        "reason": "You already own one, and it is what irritated your skin. A second retinoid would make redness worse."
+      },
+      {
+        "label": "Eye creams for dark circles, bags or tear trough",
+        "reason": "Dark circles (61.7) and eye bags (68.9) are only at watch level. Tear trough (63.0) is about structure under the skin, and no cream can change it."
+      },
+      {
+        "label": "BHA exfoliant",
+        "reason": "Acne (87.6) and pores (71.2) are fine. A second acid would only add irritation."
+      },
+      {
+        "label": "Peptide firming serum ($68)",
+        "reason": "Firmness is at watch level (61.0) and the serum is over your $50 budget. Your night balm and SPF already help."
+      }
+    ],
+    "routine": {
+      "am": [
+        {
+          "product_id": "oramel-milk-cleanser"
+        },
+        {
+          "product_id": "pallu-tranexamic-3"
+        },
+        {
+          "product_id": "velin-spf50-fluid"
+        }
+      ],
+      "pm": [
+        {
+          "product_id": "oramel-milk-cleanser",
+          "nights": [
+            "Mon",
+            "Tue",
+            "Wed",
+            "Thu",
+            "Fri",
+            "Sat",
+            "Sun"
+          ]
+        },
+        {
+          "product_id": "pallu-glycolic-pads",
+          "nights": [
+            "Tue",
+            "Fri"
+          ]
+        },
+        {
+          "product_id": "pallu-tranexamic-3",
+          "nights": [
+            "Mon",
+            "Tue",
+            "Wed",
+            "Thu",
+            "Fri",
+            "Sat",
+            "Sun"
+          ]
+        },
+        {
+          "product_id": "oramel-squalane-balm",
+          "nights": [
+            "Mon",
+            "Tue",
+            "Wed",
+            "Thu",
+            "Fri",
+            "Sat",
+            "Sun"
+          ]
+        }
+      ],
+      "notes": [
+        "Sunscreen is the last morning step. Use two finger-lengths for face and neck.",
+        "Retinal is paused. Don't use it until your next rescan shows redness has recovered.",
+        "Pads only on Tuesday and Friday. Let them dry before the serum and balm."
+      ]
+    },
+    "look": {
+      "foundation_id": "pallu-tint-220n",
+      "everyday_lip_id": "velin-lip-rosewood",
+      "statement_lip_id": "velin-lip-coral",
+      "blush_id": "kestra-blush-peach",
+      "note": "Your skin has a warm undertone. 220N Medium is the closest match (deltaE 2.4, a very small colour difference). Rosewood is close to your natural lip colour. Coral Wash and Peach are warm picks for a brighter look."
+    },
+    "preview": {
+      "horizon_weeks": 8,
+      "concerns": [
+        {
+          "concern": "age_spot",
+          "intensity": 0.5
+        },
+        {
+          "concern": "redness",
+          "intensity": 0.5
+        },
+        {
+          "concern": "texture",
+          "intensity": 0.5
+        }
+      ]
+    },
+    "checkin": {
+      "after_weeks": 6,
+      "watch": [
+        "redness",
+        "age_spot",
+        "texture"
+      ],
+      "note": "Rescan in 6 weeks. If redness has recovered to about 64 raw or better, try the retinal again 2 nights a week, never on pad nights. Keep watching age spots and texture."
+    },
+    "caveats": [
+      "If the pads sting or your skin looks redder, pause them too and use only the cleanser, tranexamic serum, balm and SPF.",
+      "Wrinkle (54.1) and firmness (61.0) gains from the retinal take about 12 weeks. Pausing it slows those gains for now, but calm skin comes first.",
+      "The preview shows the best likely result, not a promise. Results vary."
+    ]
+  },
+  "trace": [
+    {
+      "tool": "read_scan",
+      "input": {},
+      "result": "15 concerns; flagged: age spot 52.5, wrinkle 54.1, radiance 57.2, redness 59.1, firmness 61, dark circle 61.7, moisture 62.8, texture 62.9, eye bag 68.9",
+      "isError": false,
+      "ms": 0
+    },
+    {
+      "tool": "audit_shelf",
+      "input": {},
+      "result": "keep 4 · alternate 2",
+      "isError": false,
+      "ms": 1
+    },
+    {
+      "tool": "compare_scans",
+      "input": {},
+      "result": "6 weeks apart; velin-retinal-01 irritating; pallu-tranexamic-3 working",
+      "isError": false,
+      "ms": 1
+    },
+    {
+      "tool": "match_shades",
+      "input": {},
+      "result": "best foundation 220N Medium (ΔE 2.4); warm undertone",
+      "isError": false,
+      "ms": 0
+    },
+    {
+      "tool": "find_gaps",
+      "input": {
+        "keep_ids": [
+          "oramel-milk-cleanser",
+          "pallu-tranexamic-3",
+          "pallu-glycolic-pads",
+          "oramel-squalane-balm",
+          "velin-spf50-fluid"
+        ]
+      },
+      "result": "no gaps",
+      "isError": false,
+      "ms": 1
+    },
+    {
+      "tool": "build_routine",
+      "input": {
+        "product_ids": [
+          "oramel-milk-cleanser",
+          "pallu-tranexamic-3",
+          "pallu-glycolic-pads",
+          "oramel-squalane-balm",
+          "velin-spf50-fluid"
+        ]
+      },
+      "result": "AM 3 steps, PM 4 steps, 0 conflicts",
+      "isError": false,
+      "ms": 0
+    },
+    {
+      "tool": "naive_cart",
+      "input": {},
+      "result": "9 products for $345, 3 already owned",
+      "isError": false,
+      "ms": 0
+    },
+    {
+      "tool": "preview_settings",
+      "input": {
+        "product_ids": [
+          "oramel-milk-cleanser",
+          "pallu-tranexamic-3",
+          "pallu-glycolic-pads",
+          "oramel-squalane-balm",
+          "velin-spf50-fluid"
+        ],
+        "concerns": [
+          "age_spot",
+          "redness",
+          "texture",
+          "moisture"
+        ],
+        "horizon_weeks": 8
+      },
+      "result": "age spot 0.5, redness 0.5, texture 0.5",
+      "isError": false,
+      "ms": 0
+    },
+    {
+      "tool": "submit_plan",
+      "input": "(plan)",
+      "result": "Plan does not match the schema: routine.notes: Invalid input: expected array, received undefined",
+      "isError": true,
+      "ms": 0
+    },
+    {
+      "tool": "submit_plan",
+      "input": "(plan)",
+      "result": "Plan accepted.",
+      "isError": false,
+      "ms": 1
+    }
+  ],
+  "model": "claude-opus-5-5",
+  "turns": 5,
+  "usage": {
+    "input_tokens": 12,
+    "output_tokens": 5838,
+    "cache_read_input_tokens": 35313
+  },
+  "createdAt": "2026-10-10T19:27:42.821Z",
+  "scenarioId": "lena",
+  "fingerprint": "44305ed42bf4bb53"
+}
