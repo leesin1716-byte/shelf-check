@@ -3,6 +3,18 @@ import { expect, test } from "@playwright/test";
 
 const shots = process.env.SHOTS === "1";
 
+// Section screenshots scroll the section under the sticky header; unstick it while capturing.
+test.beforeEach(async ({ page }) => {
+  if (!shots) return;
+  await page.addInitScript(() => {
+    document.addEventListener("DOMContentLoaded", () => {
+      const style = document.createElement("style");
+      style.textContent = ".topbar{position:static!important}";
+      document.head.appendChild(style);
+    });
+  });
+});
+
 test("Maya: breakout plan pauses the peel pads and buys two basics", async ({ page }) => {
   await page.goto("/");
   await expect(page.getByRole("heading", { name: "Check your shelf before you buy." })).toBeVisible();

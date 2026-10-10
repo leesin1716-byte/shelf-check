@@ -1,5 +1,5 @@
 // 「효과가 나면 이 정도」 시뮬레이션 강도(보수 상한)와 재스캔 비교로 제품별 효과를 판정한다
-import type { Concern, ShelfItem, SkinScan } from "../domain/types";
+import { CONCERN_LABEL, type Concern, type ShelfItem, type SkinScan } from "../domain/types";
 import { mustProduct } from "../catalog/products";
 import { SIMULATION_KEY } from "../youcam/requests";
 
@@ -73,14 +73,14 @@ export function compareScans(before: SkinScan, after: SkinScan, shelf: ShelfItem
       if (p.irritation >= 2 && redness && redness.delta <= -NOISE_BAND) {
         verdict = "irritating";
         why = `Redness got worse by ${Math.abs(redness.delta)} points since you started it${
-          best && best.delta >= NOISE_BAND ? `, even though ${best.concern.replace(/_/g, " ")} improved ${best.delta}` : ""
+          best && best.delta >= NOISE_BAND ? `, even though ${CONCERN_LABEL[best.concern].toLowerCase()} improved ${best.delta}` : ""
         }.`;
       } else if (weeksIn < need / 2) {
         verdict = "too_early";
         why = `${weeksIn} weeks in; this kind of product usually needs about ${need}.`;
       } else if (best && best.delta >= NOISE_BAND) {
         verdict = "working";
-        why = `${best.concern.replace(/_/g, " ")} improved ${best.delta} points (beyond the ±${NOISE_BAND} noise band).`;
+        why = `${CONCERN_LABEL[best.concern]} improved ${best.delta} points (beyond the ±${NOISE_BAND} noise band).`;
       } else if (mean <= -NOISE_BAND) {
         verdict = "not_working";
         why = "Its target concerns got worse beyond the noise band.";
