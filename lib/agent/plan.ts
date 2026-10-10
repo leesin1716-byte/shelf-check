@@ -54,7 +54,10 @@ export const PlanSchema = z.object({
 export type Plan = z.infer<typeof PlanSchema>;
 
 /** Plain JSON Schema for the submit_plan tool, generated from the same zod schema. */
-export const PLAN_JSON_SCHEMA = z.toJSONSchema(PlanSchema) as Record<string, unknown>;
+export const PLAN_JSON_SCHEMA = (() => {
+  const { $schema: _drop, ...schema } = z.toJSONSchema(PlanSchema) as Record<string, unknown>;
+  return schema;
+})();
 
 export function toRoutine(plan: Plan): Routine {
   return {
