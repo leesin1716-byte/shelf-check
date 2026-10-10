@@ -1,5 +1,6 @@
 // YouCam 색조 분석의 피부·입술 색으로 파운데이션 셰이드(CIEDE2000)와 립·블러시를 고른다
-import { PRODUCTS, type Product } from "../catalog/products";
+import { PRODUCTS, getProduct, type Product } from "../catalog/products";
+import type { LookSpec } from "../youcam/requests";
 
 type Lab = { L: number; a: number; b: number };
 
@@ -149,4 +150,15 @@ function getUndertone(id: string) {
 
 function round2(n: number) {
   return Math.round(n * 100) / 100;
+}
+
+/** The Makeup VTO request for a planned look; shared by the app and the recording script. */
+export function lookSpec(look: { foundation_id: string; blush_id: string }, lipId: string): LookSpec {
+  const shade = (id: string) => getProduct(id)?.shade?.hex ?? "#A65E62";
+  return {
+    foundation: { hex: shade(look.foundation_id), coverage: 35, glow: 40 },
+    lip: { hex: shade(lipId), texture: getProduct(lipId)?.texture ?? "satin", intensity: 55 },
+    blush: { hex: shade(look.blush_id), intensity: 30 },
+    skinSmooth: 15,
+  };
 }

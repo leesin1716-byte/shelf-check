@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { Product } from "@/lib/catalog/products";
 import { SKINCARE_CATEGORIES } from "@/lib/catalog/products";
+import { lookSpec } from "@/lib/rules/color";
 import {
   MOMENT_LABEL,
   type Moment,
@@ -175,18 +176,11 @@ export default function ShelfCheckApp({ personas, catalog }: { personas: Persona
     let cancelled = false;
     const plan = result.plan;
     const src = session.kind === "persona" ? { persona: session.personaId } : { fileId: session.fileId };
-    const shade = (id: string) => byId.get(id)?.shade?.hex ?? "#A65E62";
-    const lookSpec = (lipId: string) => ({
-      foundation: { hex: shade(plan.look.foundation_id), coverage: 35, glow: 40 },
-      lip: { hex: shade(lipId), texture: byId.get(lipId)?.texture ?? "satin", intensity: 55 },
-      blush: { hex: shade(plan.look.blush_id), intensity: 30 },
-      skinSmooth: 15,
-    });
     setPreview({ looks: {}, loading: true });
     Promise.all([
       runTask({ kind: "skin-simulation", ...src, simulation: plan.preview.concerns }).catch((e: Error) => ({ error: e.message })),
-      runTask({ kind: "makeup-vto", ...src, variant: "everyday", look: lookSpec(plan.look.everyday_lip_id) }).catch(() => null),
-      runTask({ kind: "makeup-vto", ...src, variant: "statement", look: lookSpec(plan.look.statement_lip_id) }).catch(() => null),
+      runTask({ kind: "makeup-vto", ...src, variant: "everyday", look: lookSpec(plan.look, plan.look.everyday_lip_id) }).catch(() => null),
+      runTask({ kind: "makeup-vto", ...src, variant: "statement", look: lookSpec(plan.look, plan.look.statement_lip_id) }).catch(() => null),
     ]).then(([sim, every, state]) => {
       if (cancelled) return;
       setPreview({
