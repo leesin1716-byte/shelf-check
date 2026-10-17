@@ -2,7 +2,7 @@
   "name": "shelf-check",
   "version": "0.1.0",
   "private": true,
-  "description": "A skincare shopping agent that reads your YouCam skin scan and the shelf you already own, then tells you what to keep, pause, and the one thing (if any) worth buying.",
+  "description": "A skincare shopping agent that reads your YouCam skin scan and the shelf you already own, then tells you what to keep, what to pause, and what (if anything) is worth buying.",
   "license": "MIT",
   "scripts": {
     "dev": "next dev",

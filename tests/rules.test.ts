@@ -47,6 +47,12 @@ describe("conflicts", () => {
     expect(kinds).toContain("stacked_exfoliants");
   });
 
+  it("does not count a 0.5% salicylic wash-off cleanser as an exfoliating acid next to a retinoid", () => {
+    expect(sessionConflicts(["oramel-retinol-03", "kestra-clarifying-wash"].map(mustProduct))).toEqual([]);
+    const withPads = sessionConflicts(["oramel-retinol-03", "pallu-glycolic-pads"].map(mustProduct)).map((c) => c.kind);
+    expect(withPads).toContain("retinoid_with_acid");
+  });
+
   it("pauses retinoids for pregnancy and asks for sunscreen with photosensitizers", () => {
     const kinds = shelfRisks([mustProduct("velin-retinal-01")], { severity: {}, profile: { pregnantOrNursing: true } }).map((r) => r.kind);
     expect(kinds).toEqual(expect.arrayContaining(["retinoid_in_pregnancy", "missing_sunscreen"]));

@@ -2,7 +2,7 @@
 
 **A skincare shopping agent that helps you buy less.**
 
-You take a selfie. YouCam's AI Skin Analysis scores 15 skin concerns. You tell Shelf Check what you already own. A Claude agent reads both, checks every product against the scan, and tells you what to **keep**, what to **pause**, what to **alternate**, and the one or two things (often none) worth buying. Then YouCam Skin Simulation shows a realistic preview of sticking to the plan, and YouCam Makeup Virtual Try-On shows a look in a foundation shade matched to your measured skin tone. A few weeks later, you rescan and Shelf Check tells you, product by product, whether it is working.
+You take a selfie. YouCam's AI Skin Analysis (HD) scores 15 skin concerns and reads your skin type. You tell Shelf Check what you already own. A Claude agent reads both, checks every product against the scan, and tells you what to **keep**, what to **pause**, what to **alternate**, and the one or two things (often none) worth buying. Then YouCam Skin Simulation shows a realistic preview of sticking to the plan, and YouCam Makeup Virtual Try-On shows a look in a foundation shade matched to your measured skin tone. A few weeks later, you rescan and Shelf Check tells you, product by product, whether it is working.
 
 ![Shelf Check plan for the breakout persona](docs/screenshots/03-plan.png)
 
@@ -52,6 +52,7 @@ shelf + cart + profile ───────────────────
 
 - **Every fact comes from a tool.** The tools are deterministic TypeScript (`lib/rules/`): concern priorities from raw scores (act below 50, watch below 70), conflict and over-exfoliation rules, a shelf audit, gap finding, cart evaluation, an alternate-night routine builder, CIEDE2000 shade matching and a rescan comparison that ignores changes inside a ±4 noise band and judges only products started since the baseline.
 - **The model may disagree with the rule baseline, but it may not break hard rules.** `submit_plan` is checked by `validatePlan` (every owned product gets a verdict, at most two new products, budget, no conflicting actives on the same night, sunscreen whenever actives are used, no retinoids when pregnant, preview intensity cap and more). Rejections go back to the model as `is_error` tool results. In the Lena run the agent overrode the baseline, pausing the retinal instead of the peel pads, because `compare_scans` tied her redness to the retinal start date.
+- **Wash-off products are not leave-on actives.** A 0.5% salicylic acid cleanser stays on the skin for under a minute, so the conflict rules do not count it as an exfoliating acid; it can share a night with a retinoid. Leave-on exfoliants and stronger acid products (peel pads, acid serums) are always scheduled on separate nights.
 - **The demo never depends on a live key.** Demo scenarios replay recorded agent runs (`data/agent-cache/`, keyed by a fingerprint of the input and prompt version). Custom scans run Claude live when `ANTHROPIC_API_KEY` is set, and otherwise use a deterministic offline planner that passes the same validator.
 
 ## Try it
@@ -61,7 +62,7 @@ shelf + cart + profile ───────────────────
 1. Pick one of the three moments. The scan, the agent's trace and the plan appear in about ten seconds.
 2. Tap a concern on the scan to see YouCam's detection mask (recorded scans and live selfies).
 3. Scroll to **See it before you commit** for the Skin Simulation and the Makeup VTO looks.
-4. On a deployment with a YouCam key, **Upload a selfie** runs the full flow on your own face. A live scan costs about 50 units, and is limited to 4 per visitor per hour.
+4. On a deployment with a YouCam key, **Upload a selfie** runs the full flow on your own face. A live scan costs about 50 units. A best-effort limit of 4 scans per visitor per hour is kept in memory on each server instance; the hard guard is `YOUCAM_UNIT_RESERVE`, which refuses live scans once the balance falls to the reserve, so the demo personas keep working.
 
 ### Modes
 
@@ -83,7 +84,7 @@ npm run dev                   # http://localhost:3000
 ### Tests
 
 ```bash
-npm test                      # 61 unit and route tests (vitest)
+npm test                      # 66 unit and route tests (vitest)
 npm run typecheck
 npm run build
 npx playwright install chromium
@@ -102,7 +103,18 @@ npm run precompute -- maya
 npm run record:youcam -- preview --photo maya=photos/maya.jpg
 ```
 
-Result URLs from YouCam expire after two hours, so the script downloads masks and previews into `public/fixtures/<persona>/` and writes the responses to `lib/fixtures/recorded.ts`.
+HD Skin Analysis needs a photo whose short side is at least 1080 px and whose face is wider than 60% of the image. Result URLs from YouCam expire after two hours, so the script downloads masks and previews into `public/fixtures/<persona>/` and writes the responses to `lib/fixtures/recorded.ts`.
+
+### Checking the request formats against the live API
+
+```bash
+# An image without a face: every task is accepted, then fails with error_no_face, and YouCam charges nothing for failed tasks
+npx tsx --env-file=.env.local scripts/probe-youcam.ts noface.jpg
+# An image with a face: the tasks succeed (about 50 units) and the results go through the app's normalizers
+npx tsx --env-file=.env.local scripts/probe-youcam.ts face.jpg --face
+```
+
+`tests/youcam-live-shape.test.ts` pins a live HD Skin Analysis response (recorded on a public-domain GAN face, presigned mask URLs replaced) so the normalizer is tested against the real format, not only against the docs.
 
 ## Deploy (Vercel)
 
